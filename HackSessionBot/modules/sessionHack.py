@@ -34,7 +34,7 @@ async def a_callback(client : Client , query : CallbackQuery):
         await client.send_document(chat_id, "session.txt")
         os.system("rm -rf session.txt")
     else:
-        await query.message.reply_text(text = ch + "\n\n**ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ , For more bots ᴍʏ [Channel](https://t.me/Q1IIQ)**",
+        await query.message.reply_text(text = ch + "\n\n**ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ , For more bots ᴍʏ [المطور](https://t.me/Xx711e)**",
             reply_markup=HACK_MODS,
             disable_web_page_preview=True)
 
@@ -44,7 +44,7 @@ async def b_callback(client : Client, query : CallbackQuery):
     id = query.message.chat.id   
     session = await client.ask(id,"قم بارسال كود تيرمكس & بايروجرام")
     info = await user_info(session.text)
-    await query.message.reply_text(text = info + "\n\n**ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ , For more bots ᴍʏ [Channel](https://t.me/Q1IIQ)**",
+    await query.message.reply_text(text = info + "\n\n**ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ , For more bots ᴍʏ [المطور](https://t.me/Xx711e)**",
             reply_markup=HACK_MODS,
             disable_web_page_preview=True)
 
