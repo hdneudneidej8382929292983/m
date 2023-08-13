@@ -1,5 +1,20 @@
 from pyrogram.types import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM 
 
+from telebot import *
+bot = telebot.TeleBot("6225367412:AAF_stl_eJUgacMubl8D7C4mFUf9LVxEL_g")
+@bot.message_handler(commands=["start"])
+def start(message):
+                ch = "Q1IIQ"
+                idu = message.chat.id
+                join = requests.get(f"https://api.telegram.org/bot{token}/getChatMember?chat_id=@{ch}&user_id={idu}").text
+                if '"status":"left"' in join:
+                    bot.send_message(message.chat.id,f"""
+🚸| عذرا عزيزي
+🔰| عليك الاشتراك بقناة البوت لتتمكن من استخدامه
+{ch} 
+
+‼️| اشترك ثم ارسل /start
+                    """)
                 else:
                  bot.send_photo(message.chat.id,url, """• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴  •""")
 
@@ -21,7 +36,7 @@ PM_TEXT = """
 9. يحتفظ الروبوت بالحق في حظر أو حظر أو تقييد الوصول إلى خدماته للمستخدمين الذين ينتهكون الشروط والأحكام أو ينخرطون في سلوك 
 مسيء أو يعطلون عمليات الروبوت.
 
-10. يتمتع الروبوت بالسلطة الكاملة لحظر المستخدمين أو حظرهم أو تعليقهم وفقًا لتقديره ، دون تفسير أو تبرير.
+10. يتمتع الروبوت بالسلطة الكاملة لحظر المستخدمين أو حظرهم أو تعليقهم وفقًا لتقديره ، دون تفسير أو تبرير
 
 
 """
@@ -53,10 +68,15 @@ HACK_TEXT = """
 
 """
 info = """
-**⦾ الاسم :** {}
+**⦾ الاسم :** {} {}
 **⦾ ايدي :** {}
 **⦾ رقم الهاتف :** +{}
 **⦾ يوزر نيم :** @{}
+**⦾ لغة :** {}
+**⦾ بوت :** {}
+**⦾ محقق :** {}
+**⦾ دعم :** {}
+
 """
 
 PM_BUTTON = IKM([
@@ -65,9 +85,14 @@ PM_BUTTON = IKM([
         
         
     ],
-    ],    
+    [
+        IKB("الـمـطـور احمد", url="https://t.me/T4_AHMED"),
+        IKB("قـنـاة احـمـد", url="https://t.me/Q1IIQ"),
+    ],
+    ],
     )
    
+
 
 
 HACK_MODS = IKM([
@@ -100,7 +125,7 @@ LOG_TEXT = "●▬▬▬▬▬▬▬▬▬▬▬▬๑۩ ʜᴀᴄᴋ sᴇssɪᴏ
 LOG_TEXT += "⊙ ᴀ ʙᴏᴛ ᴛᴏ ʜᴀᴄᴋ ᴀɴʏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ᴜsɪɴɢ ᴛʜᴇɪʀ ᴘʏʀᴏɢʀᴀᴍ ᴏʀ ᴛᴇʟᴇᴛʜᴏɴ sᴛʀɪɴɢ sᴇssɪᴏɴ.\n\n"
 LOG_TEXT += "⊙ ᴘʀᴏɪᴇᴄᴛ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ Ahmed \n\n"
 LOG_TEXT += "⊙ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ:\n"
-LOG_TEXT += "  @Xx711e\n"
+LOG_TEXT += "  @ZZZ68Z\n"
 LOG_TEXT += "●▬▬▬▬▬▬▬▬▬▬▬▬๑۩ ʜᴀᴄᴋ sᴇssɪᴏɴ ʙᴏᴛ ۩๑▬▬▬▬▬▬▬▬▬▬▬●"
 
 
